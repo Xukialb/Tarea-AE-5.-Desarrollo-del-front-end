@@ -503,9 +503,8 @@ height: 96px;
 
 .diagnosticos .contImg{
   grid-column: 2;
-  display: inline-flex;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  
   justify-content: center;  
   align-items: center;
   border-radius: 20px;
@@ -613,4 +612,158 @@ height: 96px;
   color: #ffffff;
   padding-right: 30px;
   padding-top: 60px;
+}
+
+/*TALLERES*/
+.talleres {
+  grid-row: 7;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin-top: 176px;
+  justify-content: center;
+  align-items: center;
+}
+
+.talleres .text-wrapper {
+  grid-row: 1;
+  flex-direction: column;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 48px;
+  text-align: center;  
+  justify-content: center;  
+}
+
+.talleres .frame{
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+}
+
+.talleres .frame .taller1{
+  grid-column: 1;
+  display: grid;
+  grid-row: 30% 10% 50%;
+  border-color: #18524d;
+  border-radius: 20px;
+  box-shadow: 4px 4px 7.7px #000000; 
+ margin-right: 5%;
+  padding: 5%; 
+  justify-content: center;
+  align-items: center;
+}
+
+
+.talleres .frame .taller1 .img1{
+  grid-row: 1;
+  padding: 2%;
+  justify-content: left;
+  align-items: left;
+  width: 100%;
+  height: 100%;  
+}
+
+.talleres .frame .taller1 .frame-1{
+  grid-row: 2;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  text-align: left;  
+  justify-content: left;
+  padding-top: 20px;
+
+}
+
+.talleres .frame .taller1 .p1{
+  grid-row: 3;
+  font-family: "Georgia";
+  font-size: 24px;
+}
+
+.talleres .frame .taller2{
+  grid-column: 2;
+  display: grid;
+  grid-row: 30% 10% 50%;
+  border-color: #18524d;
+  border-radius: 20px;
+  box-shadow: 4px 4px 7.7px #000000;
+   margin-right: 2.5%;
+   margin-left: 2.5%;
+  padding: 5%;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+.talleres .frame .taller2 .img2{
+  grid-row: 1;
+  display: flex;
+  padding: 2%;
+  width: 100%;
+  height: 100%;
+}
+
+.talleres .frame .taller2 .frame-2{
+  grid-row: 2;
+  display: flex;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  text-align: left;  
+  justify-content: left; 
+  padding-top: 20px; 
+
+}
+
+.talleres .frame .taller2 .p2{
+  grid-row: 3;
+  display: flex;
+  font-family: "Georgia";
+  font-size: 24px;  
+}
+
+.talleres .frame .taller3{
+  grid-column: 3;
+  display: grid;
+  grid-row: 30% 10% 50%;
+  border-color: #18524d;
+  border-radius: 20px;
+  box-shadow: 4px 4px 7.7px #000000; 
+  margin-left: 5%;
+  padding: 5%; 
+  justify-content:center;
+  align-items: center;
+}
+
+
+.talleres .frame .taller3 .img3{
+  display: flex;
+  grid-row: 1;
+  padding: 2%;
+  width: 100%;
+  height: 100%;  
+}
+
+.talleres .frame .taller3 .frame-3{
+  grid-row: 2;
+  display: flex;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  text-align: left;  
+  justify-content: left;  
+  padding-top: 20px;
+
+}
+
+.talleres .frame .taller3 .p3{
+  display: flex;
+  grid-row: 3;
+  font-family: "Georgia";
+  font-size: 24px;
+  
 }
