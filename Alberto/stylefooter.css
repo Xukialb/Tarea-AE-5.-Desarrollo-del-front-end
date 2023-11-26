@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.container{
+.containerFooter{
     background:#18524d;
 }
 
@@ -25,3 +25,4 @@
     padding-bottom: 8px;
     padding-right: 40px;
 }
+

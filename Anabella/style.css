@@ -614,3 +614,28 @@ height: 96px;
   padding-right: 30px;
   padding-top: 60px;
 }
+
+.containerFooter{
+  background:#18524d;
+  margin-top: 64px;
+}
+
+.redesSociales{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-top: 16px;
+  padding-left: 40px;
+
+}
+
+.avisosLegales{
+  display: flex;
+  justify-content: flex-end;
+  gap:48px;
+  color: white;
+  font-family: "ABeeZee-Regular", Helvetica;
+  font-size: 20px;
+  padding-bottom: 8px;
+  padding-right: 40px;
+}
