@@ -1,36 +1,32 @@
 .container{
     background-color: white;
     width: auto;
-    display:grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
+    display:grid;    
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
     }
     
 /*HEADER */
     .header {
-        display: grid;
-        grid-row: 1; 
-        grid-template-columns: auto;  
-        grid-template-rows: 200px 100px 100px 100px ;      
-        width: 100%;
+        display: flex;
+        flex-direction: column;         
         background-color: #18524d; 
         background-image: url(imagenes\mar.jpg);       
         background-size: cover;
-
+        height: 512px;
       }  
 
     .header .LOGO {
         display: flex;
         width: 352px;
         height: 75px;
+        justify-content: left;
         align-items: center;
         position: absolute;
         top: 45px;
         left: 58px;
       }
 
-      .header .textlogo {
-        position: relative;
+      .header .textlogo {        
         width: fit-content;
         font-family: "Inter", Helvetica;
         font-weight: 600;
@@ -40,27 +36,30 @@
         line-height: normal;
       }
 
-      .header .text1 {
-        display:flex;        
+      .header .contHeader1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+      }
+
+      .header .contHeader1 .text1 {           
         justify-content: center;
         align-items: center;
         font-family: "Inter", Helvetica;
         font-weight: 600;
         color: #ffffff;
-        font-size: 48px;
-        
+        font-size: 48px;        
     }
 
-    .header .button-wrapper{
-        grid-row:3;
-        display: flex; 
+    .header .contHeader1 .button-wrapper{
         justify-content: center;
         align-items: center;
-       
-
+        margin-top: 50px; 
     }
         
-    .header .button1 {
+    .header .contHeader1 .button1 {
     background-color: #7969d1;
     border-radius: 32px;    
     box-shadow: 4px 4px 7.7px #000000;
@@ -70,8 +69,7 @@
     color: #ffffff;
     font-family: "Inter", "Helvetica";
     height: 48px;
-    font-weight: bold;
-    
+    font-weight: bold;  
     }
 
     .header .button1:hover {
@@ -79,18 +77,11 @@
       box-shadow: 4px 4px 7.7px #000000;
     }
 
-    .header .group{
-      grid-row:4;
+    .header .group{      
       display: flex; 
       justify-content: center;
-      align-items: center;    
-    }
-
-    .header .text3{
-      grid-row:4;
-      display: flex; 
-      justify-content: center;
-      align-items: center;   
+      align-items: center;
+      margin-top: 50px;    
     }
 
     .header .bx-search{
@@ -105,7 +96,7 @@
       font-family: "Inter", "Helvetica";
       height: 48px;
       font-weight: bold;
-      width: 240px;
+      width: 232px;
       margin-right: 10px;
       }
 
@@ -141,10 +132,10 @@
 
 .nav-bar{
 grid-row: 2;
-display: grid;
-grid-template-columns: auto auto auto auto auto auto;
+display: flex;
 width: 100%;
 height: 96px;
+justify-content: space-around;
 
 }
 
@@ -341,42 +332,41 @@ height: 96px;
 
 .nuestros {
   grid-row: 3;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 64px auto;
+  display: flex;  
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 88px;
  
 }
 
+.nuestros .containerProf{
+  display: flex;
+  width: 100%;
+}
+
  .nuestros .tituloProf{  
-  grid-row: 1;
-  grid-column: 2;
-  justify-content: center;
   display: flex;
   margin-bottom: 32px;
   font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    color: #000000;
-    font-size: 48px;
-    text-align: center;
-    align-items: center;
-    justify-content: center; 
+  font-weight: 600;
+  color: #000000;
+  font-size: 48px;
+  align-items: center;
+  text-align: center;
+  justify-content: center; 
+  width: 100%;
+  border-bottom: 5px solid #18524d;  
  }
 
  .nuestros .divIm1{
-  grid-row: 2;
-  grid-column: 1;
   display: flex;
   justify-content: center;  
   box-shadow: 4px 4px 7.7px #000000;
   border-radius: 20px;
 }
 
-.nuestros .frame-3 {
-  grid-row: 2;
-  grid-column: 2;
+.nuestros .frame-3 {  
   display: grid;  
   grid-template-columns: auto;
   grid-template-rows: auto auto;
@@ -385,7 +375,8 @@ height: 96px;
 
 .nuestros .frame-3 .p {
   grid-row: 1;
-  font-family:  'Georgia';
+  display: flex;
+  font-family:  "ABeeZee-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
     font-size:32px;
@@ -393,12 +384,11 @@ height: 96px;
     line-height: normal;
     text-align: left;
     align-items: center;
-    padding-left: 30px;
+    padding-left: 2%;
     font-weight: 200;
 }
   .nuestros .divIm2{
-  grid-row: 2;
-  grid-column: 3;
+  display: flex;
   justify-content: center;
   display: flex;
   box-shadow: 4px 4px 7.7px #000000;
@@ -425,8 +415,6 @@ height: 96px;
   font-weight: bold;     
   justify-content: center;
   align-items: center;
-  
-  
 }
 
 .nuestros .frame-3 .botCita:hover{
@@ -434,27 +422,22 @@ height: 96px;
   box-shadow: 4px 4px 7.7px #000000;
 }
 
-/*TRATAMEINTOS*/
+/*TRATAMIENTOS*/
 
 .tratamientos{
   grid-row: 4;
-  display: grid;
-  grid-template-columns: 40% 60%;
+  display: flex;  
   margin-top: 176px;
 }
 
 .tratamientos .rectangle{
-  grid-column: 1;
-  width: 100%;
-  height: 100%;
+  width: 50%;
   border-radius: 20px;
   box-shadow: 4px 4px 7.7px #000000;
 }
 
 .tratamientos .frame{
-  grid-column: 2;  
-  display: grid;
-  grid-template-rows: 20% 80%;
+  width: 50%;
   background-color: #18524d;
   border-radius: 20px;  
   justify-content: center;  
@@ -465,20 +448,17 @@ height: 96px;
   height: auto;
 }
 
-.tratamientos .frame .text-wrapper{
-  grid-row: 2;  
-  font-family: 'Georgia';  
+.tratamientos .frame .p{
+  font-family: "ABeeZee-Regular", Helvetica;  
   font-size: 32px;    
   align-items: right;
   text-align: right;  
   color: #ffffff;
-  padding-right: 30px;   
+  padding-right: 5%; 
+  padding-left: 5%;  
 }
 
-.tratamientos .frame .text-wrapper-2{
-  grid-row: 1;  
-  justify-content: center;
-  display: flex;
+.tratamientos .frame .tit{   
   margin-bottom: 32px;
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: 600;
@@ -488,33 +468,21 @@ height: 96px;
   justify-content: right;  
   padding-top: 20px;
   color: #ffffff;
-  padding-right: 30px;
-  padding-top: 60px;
+  padding-right: 5%;
+  padding-top: 10%;
 }
 
 /*DIAGNÓSTICOS*/
 
 .diagnosticos{
   grid-row: 5;
-  display: grid;
-  grid-template-columns: 60% 40%;
+  display: flex;
+  width: 100%;
   margin-top: 176px;
  }
 
-.diagnosticos .contImg{
-  grid-column: 2;
-  display: flex;
-  
-  justify-content: center;  
-  align-items: center;
-  border-radius: 20px;
-  box-shadow: 4px 4px 7.7px #000000;  
-  }
-
 .diagnosticos .frame{
-  grid-column: 1;
-  display: grid;
-  grid-template-rows: 20% 80%;
+  width: 50%;
   border-radius: 20px;  
   justify-content: center;  
   align-items: center;
@@ -524,10 +492,7 @@ height: 96px;
   border-color: #18524d;
 }
 
-.diagnosticos .frame .text-wrapper{
-  grid-row: 1;
-  justify-content: center;
-  display: flex;
+.diagnosticos .frame .tit{
   margin-bottom: 32px;
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: 600;
@@ -544,7 +509,7 @@ height: 96px;
 .diagnosticos .frame .p{
   grid-row: 2;  
   display: flex;
-  font-family: 'Georgia';  
+  font-family: "ABeeZee-Regular", Helvetica;  
   font-size: 32px;    
   justify-content: left;
   text-align: left;  
@@ -553,17 +518,29 @@ height: 96px;
   padding-left: 30px; 
 }
 
+.diagnosticos .contImg{
+  width: 50%; 
+  border-radius: 20px;
+  box-shadow: 4px 4px 7.7px #000000; 
+  position: fixed;
+  object-fit: cover;
+  }
+
+  .diagnosticos .contImg .im{ 
+    width: 100%;
+    height: 100%;
+  }
+
+  
 /*DESCANSO*/
 .descanso{
   grid-row: 6;
-  display: grid;
-  grid-template-columns: 40% 60%;
+  display: flex;
   margin-top: 176px;
 }
 
 .descanso .contIm{
-  grid-column: 1;
-  width: 100%;
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;  
@@ -573,34 +550,28 @@ height: 96px;
   }
 
   .descanso .frame{
-    grid-column: 2;
-    display: grid;
-    width: 100%;
-    grid-template-rows: 20% 80%;
+    width: 50%;
+    background-color: #18524d;
     border-radius: 20px;  
     justify-content: center;  
     align-items: center;
     box-shadow: 4px 4px 7.7px #000000;
     margin-top:5% ;
     margin-bottom: 5%;
-    background-color: #18524d;
-  }
+    height: auto;
+    }
 
-  .descanso .frame .text1{
-    grid-row: 2;  
-    display: flex;
-    font-family: 'Georgia';  
+  .descanso .frame .p{
+    font-family: "ABeeZee-Regular", Helvetica;  
     font-size: 32px;    
-    justify-content: right;
+    align-items: right;
     text-align: right;  
     color: #ffffff;
-    padding-right: 30px; 
+    padding-right: 5%; 
+    padding-left: 5%;  
   }
 
-.descanso .frame .text2{
-  grid-row: 1;  
-  justify-content: center;
-  display: flex;
+.descanso .frame .tit{
   margin-bottom: 32px;
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: 600;
@@ -610,23 +581,267 @@ height: 96px;
   justify-content: right;  
   padding-top: 20px;
   color: #ffffff;
-  padding-right: 30px;
-  padding-top: 60px;
+  padding-right: 5%;
+  padding-top: 10%;
 }
 
 
 /*TALLERES*/
 .talleres {
   grid-row: 7;
-  display: grid;
-  grid-template-rows: auto auto auto;
+  display: flex;  
+  flex-direction: column;
   margin-top: 176px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.talleres .tit {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 48px;
+  text-align: center;  
+  justify-content: center; 
+  width: 100%;
+  border-bottom: 5px solid #18524d;   
+}
+
+.talleres .frame{
+  display: flex;
+  justify-content: space-around; 
+  gap:16px; 
+}
+
+.talleres .frame .taller1{
+  display: flex;
+  flex-direction: column;    
+  border-color: #18524d;
+  border-radius: 20px;
+  box-shadow: 4px 4px 7.7px #000000; 
+  padding: 1%;  
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.talleres .frame .taller1 .img{
+  width: 100%;
+  height: 100%;  
+}
+
+.talleres .frame .taller1 .tit1{
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  text-align: left;  
+  justify-content: left;
+  padding-top: 20px;
+
+}
+
+.talleres .frame .taller1 .p{
+  font-family: "ABeeZee-Regular", Helvetica;
+  font-size: 24px;
+}
+
+.talleres .frame .taller1:hover {
+  opacity: 0.7; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.talleres .frame .taller2{
+  display: flex;
+  flex-direction: column;    
+  border-color: #18524d;
+  border-radius: 20px;
+  box-shadow: 4px 4px 7.7px #000000; 
+  padding: 1%;  
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+
+.talleres .frame .taller2 .img{
+  width: 100%;
+  height: 100%;  
+}
+
+.talleres .frame .taller2 .tit1{
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  text-align: left;  
+  justify-content: left;
+  padding-top: 20px;
+
+}
+
+.talleres .frame .taller2 .p{
+ font-family: "ABeeZee-Regular", Helvetica;
+  font-size: 24px;
+}
+
+.talleres .frame .taller2:hover {
+  opacity: 0.7; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+.talleres .frame .taller3{
+  display: flex;
+  flex-direction: column;    
+  border-color: #18524d;
+  border-radius: 20px;
+  box-shadow: 4px 4px 7.7px #000000; 
+  padding: 1%;  
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+
+.talleres .frame .taller3 .img{
+  width: 100%;
+  height: 100%;  
+}
+
+.talleres .frame .taller3 .tit1{
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  text-align: left;  
+  justify-content: left;
+  padding-top: 20px;
+
+}
+
+.talleres .frame .taller3 .p{
+  font-family: "ABeeZee-Regular", Helvetica;
+  font-size: 24px;
+}
+
+.talleres .frame .taller3:hover {
+  opacity: 0.7; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/*BUTTON*/
+.botonCuenta{
+  grid-row: 8;
+  display: flex;
+  margin-top: 192px; 
   justify-content: center;
   align-items: center;
 }
 
-.talleres .text-wrapper {
-  grid-row: 1;
+.botonCuenta .bCuenta{
+  background-color: #8b7c3b;
+  border-radius: 32px;    
+  box-shadow: 4px 4px 7.7px #000000;
+  width: 30%;
+  font-size: 24px;
+  color: #ffffff;
+  font-family: "Inter", "Helvetica";
+  height: 48px;
+  font-weight: bold;     
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 176px;
+}
+
+.botonCuenta .bCuenta:hover{
+  background-color: #665B28;
+  box-shadow: 4px 4px 7.7px #000000;
+}
+
+/*BLOG*/
+.blog {
+  grid-row: 9;
+  display: flex; 
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+}
+
+.blog .text  {  
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 48px;
+  text-align: center;  
+  justify-content: center;
+  width: 100%;
+  border-bottom: 5px solid #18524d;  
+  }
+
+.blog .frame {  
+  display: flex;  
+  justify-content:space-around;
+  align-items: center;
+  gap: 16px  
+}
+
+.blog .frame .rectangle{
+  display: flex;
+  flex-direction: column;    
+  background-color: #18524d;
+  border-radius: 20px;
+  box-shadow: 4px 4px 7.7px #000000; 
+  padding: 5%;  
+  justify-content: left;
+  align-items: left;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.blog .frame .rectangle .img{  
+  width: 100%;
+  height: 100%; 
+}
+
+.blog .frame .rectangle .text1{  
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: white;
+  font-size: 32px;   
+  padding-top: 20px;
+}
+
+.blog .frame .rectangle .p{  
+  color: #ffffff;
+  font-family: "ABeeZee-Regular", Helvetica;
+  font-size: 24px;
+}
+
+.blog .frame .rectangle .fecha{
+  font-family: "ABeeZee-Regular", Helvetica;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.blog .frame .rectangle:hover {
+  opacity: 0.7; 
+  background-color: rgba(0, 0, 0, 0.5);  
+}
+
+/*VALORACIONES*/
+
+.valoraciones{
+  grid-row: 10;
+  display: flex;
+  flex-direction: column;
+  margin-top: 176px;  
+  gap: 16px ;
+}
+
+.valoraciones .texto{
   flex-direction: column;
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: 600;
@@ -634,142 +849,53 @@ height: 96px;
   font-size: 48px;
   text-align: center;  
   justify-content: center;  
+  margin-bottom: 32px;
+  width: 100%;
+  border-bottom: 5px solid #18524d;
 }
 
-.talleres .frame{
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+
+.valoraciones .frame{
+  display: flex;  
+  justify-content:space-around;
+  gap: 8px;  
 }
 
-.talleres .frame .taller1{
-  grid-column: 1;
-  display: grid;
-  grid-row: 30% 10% 50%;
-  border-color: #18524d;
+.valoraciones .frame .rectangle{ 
+  display: flex;
+  flex-direction: column;    
   border-radius: 20px;
   box-shadow: 4px 4px 7.7px #000000; 
- margin-right: 5%;
-  padding: 5%; 
-  justify-content: center;
-  align-items: center;
-}
-
-
-.talleres .frame .taller1 .img1{
-  grid-row: 1;
-  padding: 2%;
+  padding: 2%;  
   justify-content: left;
   align-items: left;
-  width: 100%;
-  height: 100%;  
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+
 }
 
-.talleres .frame .taller1 .frame-1{
-  grid-row: 2;
+.valoraciones .frame .rectangle .r{
+ width: 100%; 
+}
+
+.valoraciones .frame .rectangle .nom{
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: 600;
   color: #000000;
   font-size: 32px;
-  text-align: left;  
-  justify-content: left;
-  padding-top: 20px;
-
-}
-
-.talleres .frame .taller1 .p1{
-  grid-row: 3;
-  font-family: "Georgia";
-  font-size: 24px;
-}
-
-.talleres .frame .taller2{
-  grid-column: 2;
-  display: grid;
-  grid-row: 30% 10% 50%;
-  border-color: #18524d;
-  border-radius: 20px;
-  box-shadow: 4px 4px 7.7px #000000;
-   margin-right: 2.5%;
-   margin-left: 2.5%;
-  padding: 5%;
-  justify-content: center;
-  align-items: center; 
-}
-
-
-.talleres .frame .taller2 .img2{
-  grid-row: 1;
-  display: flex;
-  padding: 2%;
-  width: 100%;
-  height: 100%;
-}
-
-.talleres .frame .taller2 .frame-2{
-  grid-row: 2;
-  display: flex;
-  font-family: "Inter-SemiBold", Helvetica;
-  font-weight: 600;
-  color: #000000;
-  font-size: 32px;
-  text-align: left;  
-  justify-content: left; 
-  padding-top: 20px; 
-
-}
-
-.talleres .frame .taller2 .p2{
-  grid-row: 3;
-  display: flex;
-  font-family: "Georgia";
-  font-size: 24px;  
-}
-
-.talleres .frame .taller3{
-  grid-column: 3;
-  display: grid;
-  grid-row: 30% 10% 50%;
-  border-color: #18524d;
-  border-radius: 20px;
-  box-shadow: 4px 4px 7.7px #000000; 
-  margin-left: 5%;
-  padding: 5%; 
-  justify-content:center;
-  align-items: center;
-}
-
-
-.talleres .frame .taller3 .img3{
-  display: flex;
-  grid-row: 1;
-  padding: 2%;
-  width: 100%;
-  height: 100%;  
-}
-
-.talleres .frame .taller3 .frame-3{
-  grid-row: 2;
-  display: flex;
-  font-family: "Inter-SemiBold", Helvetica;
-  font-weight: 600;
-  color: #000000;
-  font-size: 32px;
-  text-align: left;  
   justify-content: left;  
-  padding-top: 20px;
-
+ }
+ 
+.valoraciones .frame .rectangle .p{
+ font-family: "ABeeZee-Regular", Helvetica;
+ font-size: 24px;
 }
 
-.talleres .frame .taller3 .p3{
-  display: flex;
-  grid-row: 3;
-  font-family: "Georgia";
-  font-size: 24px;
-}
+
+/*FOOTER*/
 
 /*FOOTER */
 .containerFooter{
+  grid-row: 11;
   background:#18524d;
   margin-top: 64px;
 }
@@ -793,3 +919,6 @@ height: 96px;
   padding-bottom: 8px;
   padding-right: 40px;
 }
+
+/*DISEÑO RESPONSIVE PARA MOVIL*/
+
