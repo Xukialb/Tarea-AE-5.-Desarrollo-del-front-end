@@ -1,8 +1,7 @@
 .container{
     background-color: white;
     width: auto;
-    display:grid;
-    grid-template-columns: 20% 60% 20%;
+    display:grid;    
     grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
     }
     
