@@ -1,3 +1,4 @@
+ 
 .container{
     background-color: white;
     width: auto;
@@ -9,8 +10,7 @@
     .header {
         display: flex;
         flex-direction: column;         
-        background-color: #18524d; 
-        background-image: url(imagenes\mar.jpg);       
+        background-color: #18524d;              
         background-size: cover;
         height: 512px;
       }  
@@ -133,14 +133,14 @@
 .nav-bar{
 grid-row: 2;
 display: flex;
+flex-wrap: wrap;
 width: 100%;
 height: 96px;
 justify-content: space-around;
 
 }
 
-.nav-bar .botones-nav1 {
-  grid-column: 1;    
+.nav-bar .botones-nav1 {  
   display: inline-flex; 
   align-items: center;
   justify-content: center;
@@ -167,7 +167,6 @@ justify-content: space-around;
 }
 
 .nav-bar .botones-nav2 {
-  grid-column: 2;    
   display: inline-flex; 
   align-items: center;
   justify-content: center;
@@ -194,7 +193,6 @@ justify-content: space-around;
 }
 
 .nav-bar .botones-nav3 {
-  grid-column: 3;    
   display: inline-flex; 
   align-items: center;
   justify-content: center;
@@ -220,8 +218,7 @@ justify-content: space-around;
   
 }
 
-.nav-bar .botones-nav4 {
-  grid-column: 4;    
+.nav-bar .botones-nav4 {  
   display: inline-flex; 
   align-items: center;
   justify-content: center;
@@ -246,8 +243,7 @@ justify-content: space-around;
   font-weight: bold;
   
 }
-.nav-bar .botones-nav5 {
-  grid-column: 5;    
+.nav-bar .botones-nav5 {  
   display: inline-flex; 
   align-items: center;
   justify-content: center;
@@ -332,7 +328,8 @@ justify-content: space-around;
 
 .nuestros {
   grid-row: 3;
-  display: flex;  
+  display: flex; 
+  flex-wrap: wrap; 
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -342,11 +339,11 @@ justify-content: space-around;
 
 .nuestros .containerProf{
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
  .nuestros .tituloProf{  
-  display: flex;
   margin-bottom: 32px;
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: 600;
@@ -359,55 +356,51 @@ justify-content: space-around;
   border-bottom: 5px solid #18524d;  
  }
 
- .nuestros .divIm1{
-  display: flex;
+ .nuestros .containerProf .divIm1{
   justify-content: center;  
   box-shadow: 4px 4px 7.7px #000000;
   border-radius: 20px;
+  width: 25%;
 }
 
-.nuestros .frame-3 {  
-  display: grid;  
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  width: auto;
+.nuestros .containerProf .frame-3 {  
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 50%;
 }
 
-.nuestros .frame-3 .p {
-  grid-row: 1;
-  display: flex;
+.nuestros .containerProf .frame-3 .p {
   font-family:  "ABeeZee-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size:32px;
-    letter-spacing: 0;
-    line-height: normal;
-    text-align: left;
-    align-items: center;
-    padding-left: 2%;
-    font-weight: 200;
+  font-weight: 400;
+  color: #000000;
+  font-size:32px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: left;
+  align-items: center;
+  padding-left: 2%;
+  font-weight: 200;
 }
-  .nuestros .divIm2{
-  display: flex;
+  .nuestros .containerProf .divIm2{
   justify-content: center;
-  display: flex;
   box-shadow: 4px 4px 7.7px #000000;
   border-radius: 20px;
+  width: 25%;
 }
 
-.nuestros .frame-3 .botonCita{
-  grid-row: 2;
-  display: flex;  
+.nuestros .containerProf .frame-3 .botonCita{ 
   justify-content: center;
   align-items: center;
+  
 }
 
-.nuestros .frame-3 .botCita{
-  display: flex;
+.nuestros .containerProf .frame-3 .botCita{
   background-color: #8b7c3b;
   border-radius: 32px;    
   box-shadow: 4px 4px 7.7px #000000;
-  width: 50%;
+  width: 100%;
   font-size: 24px;
   color: #ffffff;
   font-family: "Inter", "Helvetica";
@@ -417,7 +410,7 @@ justify-content: space-around;
   align-items: center;
 }
 
-.nuestros .frame-3 .botCita:hover{
+.nuestros .containerProf .frame-3 .botCita:hover{
   background-color: #665B28;
   box-shadow: 4px 4px 7.7px #000000;
 }
@@ -477,11 +470,18 @@ justify-content: space-around;
 .diagnosticos{
   grid-row: 5;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   margin-top: 176px;
  }
 
-.diagnosticos .frame{
+ .diagnosticos .container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+ }
+
+.diagnosticos .container .frame{
   width: 50%;
   border-radius: 20px;  
   justify-content: center;  
@@ -492,7 +492,7 @@ justify-content: space-around;
   border-color: #18524d;
 }
 
-.diagnosticos .frame .tit{
+.diagnosticos .container .frame .tit{
   margin-bottom: 32px;
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: 600;
@@ -506,9 +506,7 @@ justify-content: space-around;
   padding-top: 60px;
 }
 
-.diagnosticos .frame .p{
-  grid-row: 2;  
-  display: flex;
+.diagnosticos .container .frame .p{  
   font-family: "ABeeZee-Regular", Helvetica;  
   font-size: 32px;    
   justify-content: left;
@@ -518,24 +516,18 @@ justify-content: space-around;
   padding-left: 30px; 
 }
 
-.diagnosticos .contImg{
-  width: 50%; 
+.diagnosticos .container.contImg{  
   border-radius: 20px;
-  box-shadow: 4px 4px 7.7px #000000; 
-  position: fixed;
-  object-fit: cover;
+  box-shadow: 4px 4px 7.7px #000000;
   }
 
-  .diagnosticos .contImg .im{ 
-    width: 100%;
-    height: 100%;
-  }
-
+  
   
 /*DESCANSO*/
 .descanso{
   grid-row: 6;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 176px;
 }
 
@@ -591,6 +583,7 @@ justify-content: space-around;
   grid-row: 7;
   display: flex;  
   flex-direction: column;
+  flex-wrap: wrap;
   margin-top: 176px;
   justify-content: center;
   align-items: center;
@@ -763,9 +756,10 @@ justify-content: space-around;
 /*BLOG*/
 .blog {
   grid-row: 9;
-  display: flex; 
+  display: flex;
+  flex-wrap: wrap; 
   flex: 1;
-  flex-direction: column;
+  flex-direction: column;  
   justify-content: center;
   align-items: center;
   gap:2rem;
@@ -783,7 +777,7 @@ justify-content: space-around;
   }
 
 .blog .frame {  
-  display: flex;  
+  display: flex; 
   justify-content:space-around;
   align-items: center;
   gap: 16px  
@@ -836,6 +830,7 @@ justify-content: space-around;
 .valoraciones{
   grid-row: 10;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   margin-top: 176px;  
   gap: 16px ;
@@ -856,7 +851,7 @@ justify-content: space-around;
 
 
 .valoraciones .frame{
-  display: flex;  
+  display: flex; 
   justify-content:space-around;
   gap: 8px;  
 }
@@ -901,6 +896,7 @@ justify-content: space-around;
 
 .redesSociales{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 40px;
   padding-top: 16px;
@@ -910,6 +906,7 @@ justify-content: space-around;
 
 .avisosLegales{
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   gap:48px;
   color: white;
@@ -919,5 +916,5 @@ justify-content: space-around;
   padding-right: 40px;
 }
 
-/*DISEÑO RESPONSIVE PARA MOVIL*/
+
 
