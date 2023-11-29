@@ -1,3 +1,5 @@
+
+
 .container {
   background-color: white;
   width: auto;
@@ -346,6 +348,9 @@
   display: flex;
   background-color: #18524d;
   color: white;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 15px;
 }
 
 .contactaPedirCita{ 
@@ -380,13 +385,13 @@ form {
 .item1{
   grid-column: 1/2;
   grid-row: 1/2;
-  width: 200px;
+  width: 50%;
 }
 
 .item2{
   grid-column: 2/3;
   grid-row: 1/2;
-  width: 400px;
+  width: 50%;
 }
 
 .item3{
@@ -401,10 +406,47 @@ form {
   width: 100px;
 }
 
+.text{
+
+}
+
 .item5{
   grid-column: 1/3;
   grid-row: 3/4;
+  text-align: center;
+  width: 65%;
+}
+
+.item5 p{
   text-align: left;
+}
+
+.item5 input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.item5 label {
+  position: relative;
+  padding-left: 30px; 
+  cursor: pointer;
+}
+
+.item5 label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; 
+  height: 20px; 
+  border: 2px solid #000; 
+  border-radius: 50%;
+  background-color: #fff; 
+}
+
+.item5 input[type="radio"]:checked + label:before {
+  background-color: #00f; 
 }
 
 
