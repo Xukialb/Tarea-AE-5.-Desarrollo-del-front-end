@@ -107,9 +107,9 @@
       .header .contHeader1 .group .button2{
         display: flex;
         background-color: #8b7c3b;
-        border-radius: 20px;    
+        border-radius: 16px;    
         box-shadow: 4px 4px 7.7px #000000;
-        width: auto;
+        width: 300px;
         font-size: 24px;
         color: #ffffff;
         font-family: "Inter", "Helvetica";
