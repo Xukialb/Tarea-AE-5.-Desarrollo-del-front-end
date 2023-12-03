@@ -122,7 +122,10 @@
       .header .contHeader1 .group .button2:hover{
       background-color: #665B28;
     }
-
+    .LOGO a{
+      text-decoration: none;
+      color: #ffffff;
+    }
 
 /*NAV BAR */
 
