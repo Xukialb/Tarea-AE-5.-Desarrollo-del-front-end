@@ -575,7 +575,7 @@ textarea {
 }
 
 /*----- MOBILE -----*/
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 650px) {
   /*HEADER*/
   .header .contHeader1 .text1 {
     font-size: 32px;
